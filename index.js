@@ -7,7 +7,6 @@ var albumsSelected = []
 var i = 0
 
 
-
 while (i < albums.length) {
     albums[i].onclick = function (e) {
         var albumTitle = this.querySelector('.title').textContent
@@ -23,11 +22,18 @@ while (i < albums.length) {
         }
         console.log(albumsSelected)
     }
-    console.log(i)
+    // console.log(i)
     i++
 }
 
+saveBtn.onclick = function () {
+    itemsTotal.textContent = albumsSelected.length + ' items saved'
+    notify.classList.add('active')
 
+    setTimeout(function () {
+        notify.classList.remove('active')
+    }, 2000)
+}
 
 
 

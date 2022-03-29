@@ -7,10 +7,16 @@ var albumsSelected = []
 var i = 0
 
 
+
 while (i < albums.length) {
     albums[i].onclick = function (e) {
         var albumTitle = this.querySelector('.title').textContent
-        console.log(albumTitle)
+
+        if (this.classList.contains('selected') !== true) {
+            this.classList.add('selected')
+        } else {
+            this.classList.remove('selected')
+        }
     }
     console.log(i)
     i++

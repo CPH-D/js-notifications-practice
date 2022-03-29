@@ -3,7 +3,18 @@ var albums = document.querySelectorAll('.album')
 var itemsTotal = document.querySelector('.items-total')
 var saveBtn = document.querySelector('.button')
 
-console.log(albums)
+var albumsSelected = []
+var i = 0
+
+
+while (i < albums.length) {
+    albums[i].onclick = function (e) {
+        var albumTitle = this.querySelector('.title').textContent
+        console.log(albumTitle)
+    }
+    console.log(i)
+    i++
+}
 
 
 

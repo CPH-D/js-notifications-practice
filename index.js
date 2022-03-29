@@ -14,9 +14,14 @@ while (i < albums.length) {
 
         if (this.classList.contains('selected') !== true) {
             this.classList.add('selected')
+            albumsSelected.push(albumTitle)
         } else {
             this.classList.remove('selected')
+            albumsSelected = albumsSelected.filter(function (item) {
+                return item !== albumTitle
+            })
         }
+        console.log(albumsSelected)
     }
     console.log(i)
     i++
